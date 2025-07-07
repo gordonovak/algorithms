@@ -12,7 +12,7 @@ Key for reading:
 * ⏳  - $\text{ dated/redundant algorithm}$
 * 🚛  - $\text{ ready for deployment}$
 ***
-#### ø/orbitSums
+#### ø/orbitSums/.
 * ```actionDoc.m2``` 📄
   Contains the documentation for the **unimplemented** *action* function. 
 * ```orbitSum.m2``` 🚛
@@ -30,7 +30,7 @@ Key for reading:
 * ```orbitSumDoc.m2``` 📄 👁️‍🗨️
   Contains the documentation for the ```OrbitSum``` package. 
 * **
-#### ø/seedGen/$*$ 
+#### ø/seedGen/.
 * ```modVector.m2``` (June 27th) 🔻 ⚠️
   Utilizes a set of vectors in $\mathbb Z_2$ to find a set of seed generators in the **Skew Commutative** setting.  
 * ```invariantgens.m2``` (July 7th)  🔻
@@ -38,7 +38,7 @@ Key for reading:
 * ```spoiled_invariantgens.m2``` (July 7th) 🔻 🚫 ⚠️ ⏳
   Utilizes finding square submatricies of a weight matrix $W$ to find a set of generating seeds 
 
-###### ø/seedGen/helperFunctions/$*$
+##### ø/seedGen/helperFunctions/.
 * Contains helper functions for ```invariantgens.m2```.
   * ```expandseeds.m2``` (July 7th) 🔻
     Contains the method $\text{expandseeds}$ for algorithmic seed expansion for a whole set. 
