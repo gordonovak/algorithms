@@ -26,8 +26,12 @@ First we find one $m \times m$ sub matrix $A$ at such that $\det(A) \ne 0.$
 Now we can create $n-m$, $m \times m+1$ sub matrices. by taking our full-rank $m\times m$ sub-matrix $A$, than adding a column vector in $W$ not in $A$. That will give us $n-m$ choices for our sub matrices.
 
 Let $W_S$ be a sub matrix of $W,$ where $S$ is a the set of indices corresponding to the columns of $W$. For each $W_S$ we claim we can create a vector $\bar v_S$ such that all row vectors in $r_m \in W$ we have that $r_m \cdot \bar v_S =0$. We can define:
+
 $$\bar v_S = \sum_{a_i \in S} (-1)^{i+1}e_{a_i}p_{\hat{a_i}}.$$
-Then, $\bar v_S$ is an exponent vector, where for a component $v_i$, our resultant invariant for the ring $\mathbb K[x_1 \cdots x_n]$ is: $$f(x_1 \, ... \; x_n) = \prod_{i=1}^n x_i^{v_i}$$.
+
+Then, $\bar v_S$ is an exponent vector, where for a component $v_i$, our resultant invariant for the ring $\mathbb K[x_1 \cdots x_n]$ is: 
+
+$$f(x_1 \, ... \; x_n) = \prod_{i=1}^n x_i^{v_i}$$.
 
 ##### ```expandseeds.m2```
 After the seeds have been generated, the $\text{expandseeds}$ algorithm takes in two inputs:
