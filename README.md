@@ -35,7 +35,7 @@ Key for reading:
   Utilizes a set of vectors in $\mathbb Z_2$ to find a set of seed generators in the **Skew Commutative** setting.  
 * ```invariantgens.m2``` (July 7th)  🔻
   Utilizes finding the submatricies of a weight matrix $W$ to find generating set of an invariant subring. 
-* ```spoiled_invariantgens.m2``` (July 7th) 🔻 ⚠️ ⏳
+* ```spoiled_invariantgens.m2``` (July 7th) 🔻 🚫 ⚠️ ⏳
   Utilizes finding square submatricies of a weight matrix $W$ to find a set of generating seeds 
 
 ###### ø/seedGen/helperFunctions/$*$
