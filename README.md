@@ -1,7 +1,51 @@
-# Workshop-2025-Tulane
+## Algorithms
+Stores the algorithms for all the gandini stuff.
+***
+### Current Algorithms
+Key for reading:
+* ¶ $\; - \;\text{documentation}$
+* 👁️‍🗨️ $ - \;\text{needs review}$
+* 🔰 $ - \;\text{tested}$
+* 🔻 $ - \;\text{untested}$
+* 🚫 $ - \;\text{nonfunctional/incomplete algorithm}$
+* ⚠️ $ - \;\text{undocumented}$
+* ⏳ $ - \;\text{dated/redundant algorithm}$
+* 🚛 $ - \;\text{ready for deployment}$
+***
+#### ø/orbitSums
+* ```actionDoc.m2``` ¶
+  Contains the documentation for the **unimplemented** *action* function. 
+* ```orbitSum.m2``` 🚛
+  Contains the package ```OrbitSum``` with all related functions:
+  * $\text{listSpInd}(n, d)$  
+  Lists the special indicies that are related to a degree
+  * $\text{listSpMon}(n, d)$   
+  Lists the special monomials that are related to a degree
+  * $\text{orbSumList}(G, n, d)$   
+  Computes the orbit sums of a list of monomials
+  * $\text{orbSum}(r, G, n)$   
+  Computes the orbit sum of a monomial
+  * $\text{shuffMon}(r, n)$   
+  Permutes all the variables of a monomial and puts the permutations in a list. 
+* ```orbitSumDoc.m2``` ¶ 👁️‍🗨️
+  Contains the documentation for the ```OrbitSum``` package. 
+* **
+#### ø/seedGen/$*$ 
+* ```modVector.m2``` (June 27th) 🔻 ⚠️
+  Utilizes a set of vectors in $\mathbb Z_2$ to find a set of seed generators in the **Skew Commutative** setting.  
+* ```invariantgens.m2``` (July 7th)  🔻
+  Utilizes finding the submatricies of a weight matrix $W$ to find generating set of an invariant subring. 
+* ```spoiled_invariantgens.m2``` (July 7th) 🔻 ⚠️ ⏳
+  Utilizes finding square submatricies of a weight matrix $W$ to find a set of generating seeds 
 
-## Welcome to the Tulane 2025 Workshop Repository!
-
-Please use this repository throughout the workshop to track and contribute to the projects. You can also keep using this repository after the workshop has ended to continue collaborating on your projects.
-
-See the [wiki tab](https://github.com/Macaulay2/Workshop-2025-Tulane/wiki) for project descriptions, schedules, guides, etc. You can also use the [projects tab](https://github.com/Macaulay2/Workshop-2025-Tulane/projects) to keep track of remaining tasks in your project.
+###### ø/seedGen/helperFunctions/$*$
+* Contains helper functions for ```invariantgens.m2```.
+  * ```expandseeds.m2``` (July 7th) 🔻
+    Contains the method $\text{expandseeds}$ for algorithmic seed expansion for a whole set. 
+  * ```gensDoc.m2```  (July 7th) ¶ 👁️‍🗨️
+    Contains the documentation for $\text{expandseeds}$, $\text{genseeds}$, and $\text{invariantgens}$.
+  * ```genseeds.m2``` (July 7th) 🔻
+    Contains the algorithm for seed generation with the submatrix method.
+  * ```lucas-expandseeds.m2``` (July 7th) 🚫 ⚠️ ⏳
+  Contains the old algorithm used by lucas to expand seed generators. 
+***
