@@ -1,20 +1,20 @@
+--  File Created July 7th, 2025
+
 --  CREDITS  --
 --  Advisor: Francesca Gandini
---  Theory: Lucas Rizzolo (2021)
---  Initial Code: Lucas Rizzolo (2021)
---      * Last Editied - Gordon Novak 07/02/25
---  Code-Cleanup: Gordon Novak
+--  Theory: Marcus Cassel & Sumner Strom
+--  Code: Gordon Novak
 --      * Last Editied - Gordon Novak 07/03/25
---  Documentation: Gordon Novak & Sasha Arasha
---      * Last Documented - 07/03/25
+--  Documentation: Gordon Novak
+--      * Last Documented - 07/07/25
+--  Review: Marcus Cassel & Sumner Strom
+--      * Last Reviewed - 07/03/25
 
 -- //////////////// --
 -- //////////////// --
 -- CODE STARTS HERE
 -- //////////////// --
 -- //////////////// --
-
-needsPackage "InvariantRing"
 
 -- METHOD_NAME: expandseeds
 -- USAGE: Finds the minimal generating seed invariants for an invariant ring
@@ -26,6 +26,7 @@ needsPackage "InvariantRing"
 expandseeds = method();
 expandseeds (List, List) := (L, ZList) ->(
 
+    R = ring(L_0);
     gR = gens(ring L_0);
     -- M will be all of the elements in our group and N will include only minimal elements of M
 
@@ -68,12 +69,14 @@ expandseeds (List, List) := (L, ZList) ->(
     for i when (i < #M) do (
 
         candidate = M_i;
-
         for j when (j < #M) do (
             if (i != j and (candidate % M_j) == 0) then (
-
+                
                 candidate = candidate // M_j;
 
+                if candidate == 1_R then (
+                    break;
+                );
             );  
         );
 
@@ -86,46 +89,4 @@ expandseeds (List, List) := (L, ZList) ->(
     return N;
 )
 
-export {"expandseeds"}
-
-beginDocumentation()
-
-document {
-    Key => expandseeds, 
-
-    Headline => "Expands a complete set of seed generators to create the minimal generating set of an invariant ring.",
-
-    Usage => "expandseeds(R,W,ZList)",
-
-    Inputs => {
-        "L" => List => {"seeds that can be used to generate the ring of invaraints."},
-        "ZList" => List => {"dimensions of the weight matrix."}
-        },    
-
-    Outputs => {
-        "Basis" => List => {"set of generators for the ring of invariants under a group action."},
-    },
-
-    PARA {"This function returns the set of generators for a ring of invariants."},
-
-    SUBSECTION "Examples",
-    PARA {"We can use this algorithm in rings of any number of variables, but the dimensions of the weight matrix utilized must be known. For automatic utilization, either use the ", TT "invargenset", " method, or combine with the ", TT "genseeds", " method."},
-    EXAMPLE {
-        "R = QQ[x_1..x_5]"
-        "ZList = {3,3,3,3,3};",
-        "expandseeds({v^2 * y, w^2 * y, x^2 * y}, ZList)"
-    },
-    EXAMPLE {
-        "R = QQ[v,w,x,y,z];",
-        "ZList = {4,4,4,4,4};",
-        "W = matrix{{1,1,1,1,1},{1,1,1,1,0}};",
-        "expandseeds(genseeds(R,W,ZList), ZList);"
-    },
-
-
-    SUBSECTION {"Ways to use ", TT "expandseeds", "."},
-    UL {
-        CODE {"expandseeds(R, W, ZList)"}
-    }
-
-}
+export {"expandseeds"};
