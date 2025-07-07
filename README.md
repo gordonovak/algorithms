@@ -3,14 +3,14 @@ Stores the algorithms for all the gandini stuff.
 ***
 ### Current Algorithms
 Key for reading:
-* 📄  -$\text{ documentation}$
-* 👁️‍🗨️  -$\text{ needs review}$
-* 🔰  -$\text{ tested}$
-* 🔻  -$\text{ untested}$
-* 🚫  -$\text{ nonfunctional/incomplete algorithm}$
-* ⚠️  -$\text{ undocumented}$
-* ⏳  -$\text{ dated/redundant algorithm}$
-* 🚛  -$\text{ ready for deployment}$
+* 📄  - $\text{ documentation}$
+* 👁️‍🗨️  - $\text{ needs review}$
+* 🔰  - $\text{ tested}$
+* 🔻  - $\text{ untested}$
+* 🚫  - $\text{ nonfunctional/incomplete algorithm}$
+* ⚠️  - $\text{ undocumented}$
+* ⏳  - $\text{ dated/redundant algorithm}$
+* 🚛  - $\text{ ready for deployment}$
 ***
 #### ø/orbitSums
 * ```actionDoc.m2``` 📄
