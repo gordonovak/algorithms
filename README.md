@@ -53,3 +53,8 @@ Key for reading:
 ##### ø/.devfiles/.
 * Contains developer files for improving algorithms. 
 ***
+
+##### Important Notes
+Here is an image for your enjoyment.
+
+<img src="/.devfiles/dog_with_apple.jpg" width="250"/>
