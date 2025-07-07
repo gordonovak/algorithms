@@ -38,7 +38,7 @@ Key for reading:
 * ```spoiled_invariantgens.m2``` (July 7th) 🔻 🚫 ⚠️ ⏳
   Utilizes finding square submatricies of a weight matrix $W$ to find a set of generating seeds 
 
-##### ø/seedGen/helperFunctions/.
+##### ø/seedGen/invar_dependencies/.
 * Contains helper functions for ```invariantgens.m2```.
   * ```expandseeds.m2``` (July 7th) 🔻
     Contains the method $\text{expandseeds}$ for algorithmic seed expansion for a whole set. 
@@ -49,3 +49,12 @@ Key for reading:
   * ```lucas-expandseeds.m2``` (July 7th) 🚫 ⚠️ ⏳
   Contains the old algorithm used by lucas to expand seed generators. 
 ***
+
+##### ø/.devfiles/.
+* Contains developer files for improving algorithms. 
+***
+
+##### Important Notes
+Here is an image for your enjoyment.
+
+<img src="/.devfiles/dog_with_apple.jpg" width="250"/>
