@@ -67,7 +67,7 @@ document {
     Headline => "Expands a complete set of seed generators to create the minimal generating set of an invariant ring.",
     Usage => "expandseeds(R,W,ZList)",
     Inputs => {
-        "L" => List => {"seeds that can be used to generate the ring of invaraints."},
+        "L" => List => {"seeds that can be used to generate the ring of invariants."},
         "ZList" => List => {"dimensions of the weight matrix."}
     },    
 
