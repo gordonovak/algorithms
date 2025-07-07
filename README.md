@@ -50,6 +50,6 @@ Key for reading:
   Contains the old algorithm used by lucas to expand seed generators. 
 ***
 
-##### ø/devfiles/.
+##### ø/.devfiles/.
 * Contains developer files for improving algorithms. 
 ***
