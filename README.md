@@ -36,7 +36,7 @@ Key for reading:
 * ```invariantgens.m2``` (July 7th)  🔻
   Utilizes finding the submatricies of a weight matrix $W$ to find generating set of an invariant subring. 
 * ```spoiled_invariantgens.m2``` (July 7th) 🔻 🚫 ⚠️ ⏳
-  Utilizes finding square submatricies of a weight matrix $W$ to find a set of generating seeds 
+  Utilizes finding square submatricies of a weight matrix $W$ to find a set of generating seeds.
 
 ##### ø/seedGen/invar_dependencies/.
 * Contains helper functions for ```invariantgens.m2```.

@@ -88,5 +88,4 @@ expandseeds (List, List) := (L, ZList) ->(
     -- Finally, we return M
     return N;
 )
-
 export {"expandseeds"};

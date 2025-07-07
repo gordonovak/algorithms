@@ -22,7 +22,7 @@
 --      INPUT: 
 --          * R     : polynomialRing    => Ring being acted upon
 --          * W     : matrix            => Weight matrix representing the group action
---          * Z     : List              => List of the order of the cyclic groups that the weight matrix represents
+--          * Z     : integer           => List of the order of the cyclic groups that the weight matrix represents
 --      OUTPUT:
 --          * N     : List              => List of generating seeds
 genseeds = method();

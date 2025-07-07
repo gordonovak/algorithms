@@ -3,12 +3,12 @@ document{
 
     Headline => "Finds the generating set of invariants under a group action.",
 
-    Usage => "invariantgens(R, W, ZList)",
+    Usage => "invariantgens(R, W, Z)",
 
     Inputs => {
-        "R" => PolynomialRing => {"Ring upon which the group action is applied."},
-        "W" => Matrix => {"The weight matrix representing the group action."},
-        "ZList" => List => {"The list of the dimensions of the weight matrix."}
+        "R"     => PolynomialRing   => {" ring upon which the group action is applied."},
+        "W"     => Matrix           => {" the weight matrix representing the group action."},
+        "ZList" => Thing               => {"a ", TT "List", " or ", TT "Integer", " representing the dimension of the group action."}
         },    
 
     Outputs => {
@@ -27,9 +27,9 @@ document{
     },
     EXAMPLE {
         "R = QQ[v,w,x,y,z];",
-        "ZList = {4,4,4,4,4};",
+        "Zp = 4;",
         "W = matrix{{1,1,1,1,1},{1,1,1,1,0}};",
-        "invariantgens(R,W,ZList)"
+        "invariantgens(R,W,Zp)"
     }
 }
 
