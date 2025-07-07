@@ -3,17 +3,17 @@ Stores the algorithms for all the gandini stuff.
 ***
 ### Current Algorithms
 Key for reading:
-* ¶ $\; - \;\text{documentation}$
-* 👁️‍🗨️ $ - \;\text{needs review}$
-* 🔰 $ - \;\text{tested}$
-* 🔻 $ - \;\text{untested}$
-* 🚫 $ - \;\text{nonfunctional/incomplete algorithm}$
-* ⚠️ $ - \;\text{undocumented}$
-* ⏳ $ - \;\text{dated/redundant algorithm}$
-* 🚛 $ - \;\text{ready for deployment}$
+* 📄  -$\text{ documentation}$
+* 👁️‍🗨️  -$\text{ needs review}$
+* 🔰  -$\text{ tested}$
+* 🔻  -$\text{ untested}$
+* 🚫  -$\text{ nonfunctional/incomplete algorithm}$
+* ⚠️  -$\text{ undocumented}$
+* ⏳  -$\text{ dated/redundant algorithm}$
+* 🚛  -$\text{ ready for deployment}$
 ***
 #### ø/orbitSums
-* ```actionDoc.m2``` ¶
+* ```actionDoc.m2``` 📄
   Contains the documentation for the **unimplemented** *action* function. 
 * ```orbitSum.m2``` 🚛
   Contains the package ```OrbitSum``` with all related functions:
@@ -27,7 +27,7 @@ Key for reading:
   Computes the orbit sum of a monomial
   * $\text{shuffMon}(r, n)$   
   Permutes all the variables of a monomial and puts the permutations in a list. 
-* ```orbitSumDoc.m2``` ¶ 👁️‍🗨️
+* ```orbitSumDoc.m2``` 📄 👁️‍🗨️
   Contains the documentation for the ```OrbitSum``` package. 
 * **
 #### ø/seedGen/$*$ 
@@ -42,7 +42,7 @@ Key for reading:
 * Contains helper functions for ```invariantgens.m2```.
   * ```expandseeds.m2``` (July 7th) 🔻
     Contains the method $\text{expandseeds}$ for algorithmic seed expansion for a whole set. 
-  * ```gensDoc.m2```  (July 7th) ¶ 👁️‍🗨️
+  * ```gensDoc.m2```  (July 7th) 📄 👁️‍🗨️
     Contains the documentation for $\text{expandseeds}$, $\text{genseeds}$, and $\text{invariantgens}$.
   * ```genseeds.m2``` (July 7th) 🔻
     Contains the algorithm for seed generation with the submatrix method.
