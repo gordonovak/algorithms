@@ -42,7 +42,7 @@ Key for reading:
 * Contains helper functions for ```invariantgens.m2```.
   * ```expandseeds.m2``` (July 7th) 🔻
     Contains the method $\text{expandseeds}$ for algorithmic seed expansion for a whole set. 
-  * ```gensDoc.m2```  (July 7th) 📄 👁️‍🗨️
+  * ```gensDoc.m2```  (July 7th) 📄
     Contains the documentation for $\text{expandseeds}$, $\text{genseeds}$, and $\text{invariantgens}$.
   * ```genseeds.m2``` (July 7th) 🔻
     Contains the algorithm for seed generation with the submatrix method.
