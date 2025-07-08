@@ -56,7 +56,24 @@ The $\text{Abelian Skew Invariants}$ algorithm takes two inputs:
 * $R$, a ring
 
 This gives us one output: 
-* $List$, a list of the invariants of $W$ over $R$. 
+* $L$, a list of the invariants of $W$ over $R$. 
 
-We will calculate all possible Z2 vectors which gives us a list, a_vectors. This will loop through the entire weight matrix. We will compare our results to a zero vector that we will create. Then we run the list of all the generators of r through the a_vectors. This lets us know that if we result with a zero vector, then it is an invariant.  
-Once we know that it is invariant, we compute the resulting invariant polynomial and add it to the invariants list. 
+Our algorithm is as follows:
+1. Calculate all possible vectors $\bar v_{z}\in \mathbb Z_2 \times \,...\times \mathbb Z_2$ of length $\ell$.  
+$\ell$ is the number of columns in our weight matrix, $W$. 
+2. Perform the operation $f=W\cdot\bar v_z$. 
+3. If $f\;\text{mod } p$ contains all $0$ entries, the exponent vector $\bar v_z$ is invariant, and add it to the list of invariants. 
+Here, $p$ is the respective size of the cyclic factor of the weight matrix. 
+4. Then, we compute the resultant invariants from the list of invariant exponent vectors.
+***
+#### ```spoiled_invariantgens.m2```
+This file is a different version of the algorithm from the ```invariantgens.m2``` file. 
+
+The $\text{spoiled\_invariantgens}$ algorithm takes three inputs:
+* $R$, the ring being acted upon.
+* $W$, a weight matrix representing the group action on the ring.
+* $p$, the order of the elementary abelian $p$-group.
+
+Then, it caculates the all possible determinants of the square submatricies of $W$. 
+We then extract the coefficients of the determinant of the submatrix and mod them out by $p$, and store the result in a list. 
+Finally, we remove redunancies from the list and return it. 
