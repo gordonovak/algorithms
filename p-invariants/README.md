@@ -51,9 +51,12 @@ For more details, please refer to the comments in the code itself.
 ***
 
 #### ```modVector.m2```
-The $\text{mod Vector}$ algorithm takes two inputs:
-* $n$, length of the vector
-* $m$, number of entries
+The $\text{Abelian Skew Invariants}$ algorithm takes two inputs:
+* $W$, finite abelian group
+* $R$, a ring
 
 This gives us one output: 
-* $vecList$, 
+* $List$, a list of the invariants of $W$ over $R$. 
+
+We will calculate all possible Z2 vectors which gives us a list, a_vectors. This will loop through the entire weight matrix. We will compare our results to a zero vector that we will create. Then we run the list of all the generators of r through the a_vectors. This lets us know that if we result with a zero vector, then it is an invariant.  
+Once we know that it is invariant, we compute the resulting invariant polynomial and add it to the invariants list. 
