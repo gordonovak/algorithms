@@ -69,7 +69,7 @@ Here, $p$ is the respective size of the cyclic factor of the weight matrix.
 #### ```spoiled_invariantgens.m2```
 This file is a different version of the algorithm from the ```invariantgens.m2``` file. 
 
-The $\text{spoiled\_invariantgens}$ algorithm takes three inputs:
+The $\text{spoiled-invariantgens}$ algorithm takes three inputs:
 * $R$, the ring being acted upon.
 * $W$, a weight matrix representing the group action on the ring.
 * $p$, the order of the elementary abelian $p$-group.
