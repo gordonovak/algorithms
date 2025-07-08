@@ -14,16 +14,16 @@ In order to make this algorithm functional, it utilizes the ```expandseeds.m2```
 ##### ```genseeds.m2```
 The $\text{genseeds}$ algorithm takes three inputs:
 * $R$ the ring
-* $W$, the linearly independet weight matrix representing the group action.
+* $W$, the full rank n $\times$ m weight matrix representing the group action. (m $\geq$ n)
 * $\mathbb Z$-$\text{list}$, the list representing the dimensions of the $p$-group. 
 
 Then, the algorithm has one output:
 * $L$, a list of the generating seeds.
 
-```genseeds``` inputs a weight matrix $W$ thats linearly independent, so $\text{dim(ker}(W)) = n-m.$ 
-First we find one $m \times m$ sub matrix $A$ at such that $\det(A) \ne 0.$ 
+```genseeds``` inputs a weight matrix $W$ thats linearly independent, so $\text{dim(ker}(W)) = m-n.$ 
+First we find one $n \times m$ sub matrix $A$ at such that $\det(A) \ne 0.$ 
 
-Now we can create $n-m$, $m \times m+1$ sub matrices. by taking our full-rank $m\times m$ sub-matrix $A$, than adding a column vector in $W$ not in $A$. That will give us $n-m$ choices for our sub matrices.
+Now we can create $m-n$, $n \times n+1$ sub matrices. by taking our full-rank $n\times n$ sub-matrix $A$, than adding a column vector in $W$ not in $A$. That will give us $m-n$ choices for our sub matrices.
 
 Let $W_S$ be a sub matrix of $W,$ where $S$ is a the set of indices corresponding to the columns of $W$. For each $W_S$ we claim we can create a vector $\bar v_S$ such that all row vectors in $r_m \in W$ we have that $r_m \cdot \bar v_S =0$. We can define:
 
