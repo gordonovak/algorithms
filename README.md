@@ -33,7 +33,7 @@ Key for reading:
 #### ø/p-invariants/.
 * ```modVector.m2``` (June 27th) 🔻 ⚠️
   Utilizes a set of vectors in $\mathbb Z_2$ to find a set of seed generators in the **Skew Commutative** setting.  
-* ```invariantgens.m2``` (July 7th)  🔻
+* ```invariantgens.m2``` (July 7th) 🔰
   Utilizes finding the submatricies of a weight matrix $W$ to find generating set of an invariant subring. 
 * ```spoiled_invariantgens.m2``` (July 7th) 🔻 🚫 ⚠️ ⏳
   Utilizes finding square submatricies of a weight matrix $W$ to find a set of generating seeds.
@@ -44,7 +44,7 @@ Key for reading:
     Contains the method $\text{expandseeds}$ for algorithmic seed expansion for a whole set. 
   * ```gensDoc.m2```  (July 7th) 📄
     Contains the documentation for $\text{expandseeds}$, $\text{genseeds}$, and $\text{invariantgens}$.
-  * ```genseeds.m2``` (July 7th) 🔻
+  * ```genseeds.m2``` (July 7th) 🔰
     Contains the algorithm for seed generation with the submatrix method.
   * ```lucas-expandseeds.m2``` (July 7th) 🚫 ⚠️ ⏳
   Contains the old algorithm used by lucas to expand seed generators. 

@@ -80,7 +80,6 @@ elementaryAbelianPGroupSeedGenerator = (W, p, R) -> (
         detMiniMatrix = determinant miniMatrix; 
 
         -- this extracts the coefficients and puts them into a exponent vector
-
         
         count = 0;
         miniCoef = coefficients detMiniMatrix;
