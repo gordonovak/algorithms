@@ -88,4 +88,10 @@ expandseeds (List, List) := (L, ZList) ->(
     -- Finally, we return M
     return N;
 )
+
+expandseeds (List, ZZ) := (L, Zp) ->(
+    R = ring(L_0);
+    return expandseeds(L, for i to #(gens R) - 1 list Zp);
+)
+
 export {"expandseeds"};

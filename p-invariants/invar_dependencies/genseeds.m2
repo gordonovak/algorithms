@@ -99,4 +99,8 @@ genseeds(PolynomialRing, Matrix, List) := (R, W, ZList) -> (
     return expR;
 )
 
+genseeds(PolynomialRing, Matrix, ZZ) := (R, W, Zp) -> (
+    return genseeds(R, W, for i to #(gens R) - 1 list Zp);
+)
+
 export {"genseeds"};

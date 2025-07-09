@@ -32,8 +32,7 @@ invariantgens(PolynomialRing, Matrix, List) := (R, W, ZList) -> (
     return expandseeds(genseeds(R, W, ZList), ZList);
 )
 invariantgens(PolynomialRing, Matrix, ZZ) := (R, W, Zp) -> (
-    ZList = for i in gens R list Zp;
-    return expandseeds(genseeds(R, W, ZList), ZList);
+    return expandseeds(genseeds(R, W, Zp), Zp);
 )
 
 export {"invariantgens"}
