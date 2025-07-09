@@ -1,4 +1,4 @@
---  CREDITS  --
+ --  CREDITS  --
 --  Advisor: Francesca Gandini
 --  Theory: Sumner Strom & Marcus Cassel
 --  Psuedocode: Sumner Strom
