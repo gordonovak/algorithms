@@ -37,6 +37,8 @@ Key for reading:
   Utilizes finding the submatricies of a weight matrix $W$ to find generating set of an invariant subring. 
 * ```spoiled_invariantgens.m2``` (July 7th) 🔻 🚫 ⚠️ ⏳
   Utilizes finding square submatricies of a weight matrix $W$ to find a set of generating seeds.
+* ```demo.m2``` (July 9th)
+  Contains a demo for dq to understand how to use the algorithms in Macaulay2. 
 
 ##### ø/p-invariants/invar_dependencies/.
 * Contains helper functions for ```invariantgens.m2```.
