@@ -100,4 +100,4 @@ invariantgens(R, W, ZList)
 R = QQ[v,w,x,y,z];
 ZList = {4,4,4,4,4};
 W = matrix{{1,1,1,1,1},{1,1,1,1,0}};
-invariantgens(R,W,ZList);
+invariantgens(R,W,ZList)
