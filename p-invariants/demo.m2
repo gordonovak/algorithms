@@ -19,14 +19,15 @@ load "invariantgens.m2";
 
 -- First, we need to define the ring we're working in.
 -- If we don't, and we just define a polynomial, we'll get an error:
-f = x_1^2 + x_2
+f := x_1^2 + x_2
 -- You should see "error: no method for binary operator ^ applied to indexed variables"
 -- Instead, let's define the ring we're working in:
 R = QQ[x_1, x_2, x_3]
 -- Here, QQ denotes the rationals. (RR denotes the reals, ZZ the integers, ect.)
 
 -- Then, we can define our polynomial!
-f = x_1^2 + x_2
+f := x_1^2 + x_2
+
 -- You should see that f belongs to the ring R:
 --       2
 -- o4 = x  + y
@@ -37,6 +38,8 @@ f = x_1^2 + x_2
 -- Perfect, now we're ready to start using the algorithm. 
 -- Now, let's define a weight matrix that concerns the group action on our ring:
 W = matrix{{0,1,1},{1,0,1}};
+M = {{0,1},{1,0}};
+
 -- Now, we need to specify the order of each of our group elements. (In elementary p-abelian groups, all orders should be the same)
 Zp = 2;
 
@@ -98,6 +101,7 @@ invariantgens(R, W, ZList)
 
 -- 5 variable example
 R = QQ[v,w,x,y,z];
-ZList = {4,4,4,4,4};
+Zp = 4;
 W = matrix{{1,1,1,1,1},{1,1,1,1,0}};
 invariantgens(R,W,ZList)
+

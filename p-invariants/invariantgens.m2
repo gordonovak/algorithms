@@ -35,6 +35,15 @@ invariantgens(PolynomialRing, Matrix, ZZ) := (R, W, Zp) -> (
     return expandseeds(genseeds(R, W, Zp), Zp);
 )
 
+needsPackage "InvariantRing"
+qdiag = method();
+qdiag(Matrix, ZZ, PolynomialRing) := (W, d, R) -> (
+    return R^(diagonalAction(W, for i to (numRows W) - 1 list d, R));
+)
+qdiag(Matrix, List, PolynomialRing) := (W, d, R) -> (
+    return R^(diagonalAction(W, d, R));
+)
+
 export {"invariantgens"}
 
 beginDocumentation();
