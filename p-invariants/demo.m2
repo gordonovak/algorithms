@@ -20,12 +20,12 @@ load "invariantgens.m2";
 -- First, we need to define the ring we're working in.
 -- If we don't, and we just define a polynomial, we'll get an error:
 f = x_1^2 + x_2
--- You should see "error: no method for binary operator ^ applied to objects"
+-- You should see "error: no method for binary operator ^ applied to indexed variables"
 -- Instead, let's define the ring we're working in:
 R = QQ[x_1, x_2, x_3]
 -- Here, QQ denotes the rationals. (RR denotes the reals, ZZ the integers, ect.)
 
--- Then, we can define a polynomial and other things!
+-- Then, we can define our polynomial!
 f = x_1^2 + x_2
 -- You should see that f belongs to the ring R:
 --       2
@@ -43,6 +43,7 @@ Zp = 2;
 -- Finally, we can call our seed generator function!
 seedList = genseeds(R, W, Zp)
 -- You should see something like this:
+--
 -- oo14 = {x x x }
 --          1 2 3
 --
@@ -67,7 +68,7 @@ expandseeds(seedList, Zp)
 -- /////////////////////
 
 -- Now it might seem like a hassle to generate and expand the seeds separately, so we programmed a composite method that handles the functions of the two methods simultaneously:
-invargenset(R, W, Zp)
+invariantgens(R, W, Zp)
 
 
 -- /////////////////////
@@ -93,10 +94,10 @@ R2 = ZZ[x_1..x_3]
 R = QQ[x_0..x_2];
 W = matrix{{0,1,1},{1,0,1}};
 ZList = {2,2,2};
-invargenset(R, W, ZList)
+invariantgens(R, W, ZList)
 
 -- 5 variable example
 R = QQ[v,w,x,y,z];
 ZList = {4,4,4,4,4};
 W = matrix{{1,1,1,1,1},{1,1,1,1,0}};
-invargenset(R,W,ZList);
+invariantgens(R,W,ZList);
