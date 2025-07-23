@@ -19,6 +19,7 @@
 1. [PreTeXt Guide](https://pretextbook.org/doc/guide/html/guide-toc.html)
 2. [Zotero](https://www.zotero.org/groups/6020146/gandini_curi_summer_2025)
 3. [Invariant Ring Documentation](https://macaulay2.com/doc/Macaulay2/share/doc/Macaulay2/InvariantRing/html/index.html)
+4. [Gandini Thesis](https://deepblue.lib.umich.edu/handle/2027.42/151589)
 ### Overleafs
 1. [Final Paper](https://www.overleaf.com/project/686e8e15f7df18a648460d4c)
 2. [Curi Poster](https://www.overleaf.com/project/68752491acd513f0d1582423)
