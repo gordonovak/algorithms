@@ -41,7 +41,7 @@ expandseeds (List, List) := (L, ZList) ->(
             m' = m;
             if not (n == m) then (
                 
-                for p in gens R when (m' != 0) do (
+                for p to n*(ZList_0 - 1) when (m' != 0) do (
 
                     -- Then, we multiply out a power. 
                     m' = m' * n;
@@ -75,7 +75,7 @@ expandseeds (List, List) := (L, ZList) ->(
         M = M | {(gR#i)^(ZList#i)};
     );
 
-    -- Now, we're going to check if we can make anything smaller
+    -- Now, we're going reduce the set to be minimal
     for i when (i < #M) do (
 
         candidate = M_i;

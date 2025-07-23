@@ -77,19 +77,15 @@ Z2ComprehensiveVectorGenerator = (n, m) -> (
 --          * R is a ring
 --      OUTPUT: List
 --          * List of the invariant of W over R
-
-AbelianGroupSkewInvariants := (D1) -> (
+skewinvariants = method();
+skewinvariants(DiagonalAction) := (D1) -> (
     
     R = ring(D1);
     D3 = toList weights D1;
 
-    if (D3#0 == 0) then (
-        W = D3#1;
-    ) else (
-        W = D3#0;
-    );
+    W = D3#1;
 
-    p = cyclicFactors D1;
+    p = (cyclicFactors D1) # 0;
     -- First, we make an empty list of the invariants
     invariantList = {};
 
@@ -114,10 +110,11 @@ AbelianGroupSkewInvariants := (D1) -> (
 
         -- We need to multiply our matrix by our vector, and to get our vector into correct matrix form, we need the transpose.
         D = W * transpose(c);
+
         -- Then we iterate through the list
-        for i from 0 to numColumns D do (
+        for i from 0 to numRows D - 1 when (D!= 0) do (
             -- Here is some data manipulation to see if we get nonzero terms. 
-            if not ((flatten entries D)_i) % p_i == 0  then (
+            if not (((flatten entries D)_i)) % p != 0  then (
                 isZero = false;
             );
         );
@@ -143,11 +140,6 @@ AbelianGroupSkewInvariants := (D1) -> (
         );
     );
 
-    -- Print out the results. 
-    print ("\nPrinting Invariants: ");
-    print invariantList;
-
-    minimalInvariantGeneratorsGröbnerBasis := groebnerBasis(ideal(invariantList));
     -- We want to return the minimal invariant generators
-    return minimalInvariantGeneratorsGröbnerBasis;
+    return invariantList;
 )
