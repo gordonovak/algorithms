@@ -43,7 +43,7 @@ Then, it will output:
 
 In order to perform the expansion, ```expandseeds.m2``` performs the following algorithm:
 1. Add the generating seeds to $\text{Basis}$. 
-2. Multiplies the generating seeds to powers of themselves, and then mods out by the respective value in $\mathbb Z$-$\text{list}$. This operation is repeated a number of times equal to the number of generators of the ring, $R$. 
+2. Multiplies the generating seeds to powers of themselves and powers of the other seeds, and then mods out by the respective value in $\mathbb Z$-$\text{list}$. This operation is repeated a number of times equal to the number of generators of the ring, $R$. 
 3. Then, it adds the pure powers to the generating set $\text{Basis}$. 
 4. Finally, it performs a minimization algorithm to reduce elements that can be created by other elements.
 
