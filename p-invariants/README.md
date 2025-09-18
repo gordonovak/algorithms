@@ -31,12 +31,12 @@ $$\bar v_S = \sum_{a_i \in S} (-1)^{i+1}e_{a_i}p_{\hat{a_i}}.$$
 
 Then, $\bar v_S$ is an exponent vector, where for a component $v_i$, our resultant invariant for the ring $\mathbb K[x_1 \cdots x_n]$ is: 
 
-$$f(x_1 \, ... \; x_n) = \prod_{i=1}^n x_i^{v_i}.$$
+$$f(x_1 , ... , x_n) = \prod_{i=1}^n x_i^{v_i}.$$
 
 ##### ```expandseeds.m2```
 After the seeds have been generated, the $\text{expandseeds}$ algorithm takes in two inputs:
 * $L$, a list of the generating seeds
-* $\mathbb Z$-$\text{list}$, a list of the dimensions of the weight matrix.
+* $\mathbb Z$ - $\text{list}$, a list of the dimensions of the weight matrix.
 
 Then, it will output:
 * $\text{Basis}$, a list containing the generators of the invariant ring. 
